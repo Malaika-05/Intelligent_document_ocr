@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-mark">
+    <span class="topbar-dot"></span>
+    <span class="topbar-title">Document Assistant</span>
+  </div>
+  <span class="topbar-sub">Detection · OCR · Handwriting · Q&amp;A</span>
+</header>
+
+<main class="layout">
+
+  <!-- ============ LEFT: UPLOAD + PREVIEW ============ -->
+  <section class="panel panel-doc">
+
+    <div class="dropzone" id="dropzone">
+      <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.bmp,.tif,.tiff" hidden>
+      <div class="dropzone-inner" id="dropzoneInner">
+        <p class="dropzone-label">Drop a document image here</p>
+        <p class="dropzone-sub">or click to browse · JPG, PNG, TIFF, BMP</p>
+      </div>
+      <div class="scan-frame" id="scanFrame" hidden>
+        <img id="previewImg" alt="Document preview">
+        <div class="scan-line" id="scanLine" hidden></div>
+      </div>
+    </div>
+
+    <div class="status-row" id="statusRow" hidden>
+      <span class="status-dot" id="statusDot"></span>
+      <span id="statusText">Processing…</span>
+    </div>
+
+    <div class="results" id="results" hidden>
+
+      <div class="result-block">
+        <h2 class="result-heading">Detected objects</h2>
+        <div class="chip-row" id="objectChips"></div>
+      </div>
+
+      <div class="result-block">
+        <h2 class="result-heading">Printed text <span class="count" id="printedCount"></span></h2>
+        <pre class="mono-block" id="printedText"></pre>
+      </div>
+
+      <div class="result-block">
+        <h2 class="result-heading">Handwritten text</h2>
+        <pre class="mono-block" id="handwrittenText"></pre>
+      </div>
+
+      <div class="index-note" id="indexNote"></div>
+
+    </div>
+
+  </section>
+
+  <!-- ============ RIGHT: CHAT ============ -->
+  <section class="panel panel-chat">
+    <h2 class="chat-heading">Ask the document</h2>
+    <div class="chat-log" id="chatLog">
+      <div class="chat-msg chat-msg-system">Upload a document, then ask a question about it.</div>
+    </div>
+    <form class="chat-input-row" id="chatForm">
+      <input type="text" id="chatInput" placeholder="e.g. What is the total amount on this invoice?" autocomplete="off">
+      <button type="submit" id="chatSend">Ask</button>
+    </form>
+  </section>
+
+</main>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
