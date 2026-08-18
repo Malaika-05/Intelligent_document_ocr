@@ -1,39 +1,35 @@
-# --- Web frameworks ---
-Flask==3.1.3
-streamlit==1.61.1
+# ============================================================
+# Streamlit Cloud - Intelligent Document OCR
+# Python 3.11
+# ============================================================
 
-# --- Env / config ---
+# --- Web framework ---
+streamlit==1.61.1
+Flask==3.1.3
+
+# --- Environment / configuration ---
 python-dotenv==1.2.2
 
-# --- Computer vision / detection ---
-# opencv-python-headless==4.10.0.84
-# ultralytics==8.3.181
-# pillow==11.0.0
-
-# --- OCR (printed text) ---
-# paddlepaddle==3.0.0
-# paddleocr==3.0.3
-
-opencv-python==4.11.0.86
+# --- Computer Vision ---
 opencv-python-headless==4.10.0.84
+Pillow==11.0.0
 
-paddleocr==3.0.3
+# --- Object Detection ---
+ultralytics==8.3.181
+
+# --- OCR: PaddleOCR ---
 paddlepaddle==3.0.0
+paddleocr==3.0.3
 paddlex==3.0.3
 
+# --- Handwriting OCR: TrOCR ---
 torch==2.5.1
 torchvision==0.20.1
 transformers==4.46.3
-ultralytics==8.3.181
 
-# --- Handwriting OCR (TrOCR) ---
-# torch==2.5.1
-# torchvision==0.20.1
-# transformers==4.46.3
-
-# --- Retrieval (TF-IDF chatbot indexing) ---
+# --- Retrieval / TF-IDF ---
 scikit-learn==1.9.0
 numpy==1.26.4
 
-# --- Chatbot (Groq LLaMA) ---
-groq==1.6.0
+# --- Chatbot: Groq ---
+groq==1.6.0 
