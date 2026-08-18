@@ -6,18 +6,30 @@ streamlit==1.61.1
 python-dotenv==1.2.2
 
 # --- Computer vision / detection ---
-opencv-python-headless==4.10.0.84
-ultralytics==8.3.181
-pillow==11.0.0
+# opencv-python-headless==4.10.0.84
+# ultralytics==8.3.181
+# pillow==11.0.0
 
 # --- OCR (printed text) ---
-paddlepaddle==3.0.0
-paddleocr==3.0.3
+# paddlepaddle==3.0.0
+# paddleocr==3.0.3
 
-# --- Handwriting OCR (TrOCR) ---
+opencv-python==4.11.0.86
+opencv-python-headless==4.10.0.84
+
+paddleocr==3.0.3
+paddlepaddle==3.0.0
+paddlex==3.0.3
+
 torch==2.5.1
 torchvision==0.20.1
 transformers==4.46.3
+ultralytics==8.3.181
+
+# --- Handwriting OCR (TrOCR) ---
+# torch==2.5.1
+# torchvision==0.20.1
+# transformers==4.46.3
 
 # --- Retrieval (TF-IDF chatbot indexing) ---
 scikit-learn==1.9.0
