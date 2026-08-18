@@ -1,49 +1,8 @@
-# ---- Secrets ----
-.env
-.streamlit/secrets.toml
-
-# ---- Python ----
+.venv/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-*.egg-info/
-.Python
-
-# ---- Virtual environment ----
-venv/
-env/
-.venv/
-
-# ---- Uploaded / generated files (don't commit user data) ----
-uploads/*
-!uploads/.gitkeep
-output/
-outputs/
-
-# ---- OCR / model cache directories (downloaded at runtime) ----
-.paddleocr/
-.paddlex/
-.cache/
-*.pdiparams
-*.pdmodel
-
-# Hugging Face / TrOCR cached weights (re-downloaded automatically)
-.cache/huggingface/
-**/models--*/
-
-# ---- Jupyter / notebooks ----
-.ipynb_checkpoints/
-
-# ---- IDE / editor ----
+.env
+.env.*
+.streamlit/secrets.toml
 .vscode/
 .idea/
-*.swp
-
-# ---- OS clutter ----
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# ---- Logs ----
-*.log

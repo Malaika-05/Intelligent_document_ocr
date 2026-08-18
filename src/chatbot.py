@@ -94,7 +94,7 @@ def answer_question(question, index=None, top_k=4):
     client = _get_client()
 
     completion = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt},
